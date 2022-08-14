@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.5/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.6.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.3"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.5/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"如何成为稚晖君（电子产品开发简介）","c":[{"t":"heading","d":2,"p":{"lines":[1,2]},"v":"电路设计能力","c":[{"t":"heading","d":3,"p":{"lines":[2,3]},"v":"模拟电路设计","c":[{"t":"heading","d":4,"p":{"lines":[3,4]},"v":"三极管和MOS管开关"},{"t":"heading","d":4,"p":{"lines":[4,5]},"v":"基本运放电路"}]},{"t":"heading","d":3,"p":{"lines":[5,6]},"v":"数字电路设计","c":[{"t":"heading","d":4,"p":{"lines":[6,7]},"v":"接口设计","c":[{"t":"heading","d":5,"p":{"lines":[7,8]},"v":"I2C(最基本的单片机和ARM的接口，低速简单)"},{"t":"heading","d":5,"p":{"lines":[8,9]},"v":"SPI(最基本的单片机和ARM的接口，低速简单)"},{"t":"heading","d":5,"p":{"lines":[9,10]},"v":"UART(最基本的单片机和ARM的接口，低速简单)"},{"t":"heading","d":5,"p":{"lines":[10,11]},"v":"以太网(一对过G的差分线)"},{"t":"heading","d":5,"p":{"lines":[11,12]},"v":"MIPI(MIPI接口包括一个CSI和DSI(稚晖君项目中摄像头用的都是CSI,显示器用的都是DSI))"},{"t":"heading","d":5,"p":{"lines":[12,13]},"v":"DDR存储器(DDR3/DDR4在布线上有很多的要求，小电视项目又小又复杂就用到了DDR存储器)"}]}]},{"t":"heading","d":3,"p":{"lines":[13,14]},"v":"电源设计","c":[{"t":"heading","d":4,"p":{"lines":[14,15]},"v":"DC-DC(开关电源)"},{"t":"heading","d":4,"p":{"lines":[15,16]},"v":"LDO(线性低压降电源)"}]}]},{"t":"heading","d":2,"p":{"lines":[16,17]},"v":"PCB设计能力","c":[{"t":"heading","d":3,"p":{"lines":[17,18]},"v":"立创EDA"},{"t":"heading","d":3,"p":{"lines":[18,19]},"v":"Altium Design(自己开发以及科研推荐，HD匠“两个小时的PCB画图流程”)"},{"t":"heading","d":3,"p":{"lines":[19,20]},"v":"Cadence（更专业，6层板以下Altium就够了）"}]},{"t":"heading","d":2,"p":{"lines":[20,21]},"v":"MCU开发能力","c":[{"t":"heading","d":3,"p":{"lines":[21,22]},"v":"单片机"},{"t":"heading","d":3,"p":{"lines":[22,23]},"v":"DSP"},{"t":"heading","d":3,"p":{"lines":[23,24]},"v":"ARM"},{"t":"heading","d":3,"p":{"lines":[24,25]},"v":"FPGA"}]},{"t":"heading","d":2,"p":{"lines":[25,26]},"v":"机械设计能力","c":[{"t":"heading","d":3,"p":{"lines":[26,27]},"v":"Slidworks","c":[{"t":"heading","d":4,"p":{"lines":[27,28]},"v":"适合加工工件"}]},{"t":"heading","d":3,"p":{"lines":[28,29]},"v":"Fusion360","c":[{"t":"heading","d":4,"p":{"lines":[29,30]},"v":"适合加工工件（稚晖君设计连接关系时候用）"}]},{"t":"heading","d":3,"p":{"lines":[30,31]},"v":"Riho","c":[{"t":"heading","d":4,"p":{"lines":[31,32]},"v":"适合设计外观（稚晖君设计曲面时用）"}]}]}]})</script>
+</body>
+</html>
